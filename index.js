@@ -136,10 +136,14 @@ function wrapText(text, rowLength) {
         } else {
             row = spacedEndings(row, rowLength);
             rows.push(row);
-            row = " ";
+            row = " " +word;
         }
     });
-
+    rows.push(spacedEndings(" " + words[words.length -1], rowLength));
+    
+    /*rows.forEach(renglon => {
+        console.log(renglon);
+    });*/
     return rows;
 }
 
